@@ -12,9 +12,6 @@ source:
       - urn: Canonical:UbuntuServer:16.04-LTS:latest
         username: adminuser
 
-inputs:
-  - port_number
-
 infrastructure:
   compute:
     spec:
@@ -26,7 +23,7 @@ infrastructure:
   connectivity:
     external:
       - port_info:
-          port: $port_number
+          port: 80
 
 configuration:
   initialization:
