@@ -1,3 +1,4 @@
+  
 #    This is a sample blueprint that deploys two applications in AWS
 #    - basic_app - a simple 1 instance VM from an image
 #    - advanced_app - 2 VMs with a loadbalancer, configured with custom scripts with user inputs
@@ -11,9 +12,18 @@ kind: blueprint
 metadata:
   description: Blueprint that deploys two applications in Azure
 
+
 clouds:
   - azure: westus
+
+inputs:
+  - advanced_app_port: 1234
+
 
 applications:
   - advanced-app:
       instances: 1
+      depends_on:
+        - basic-app
+      input_values:
+        - port_number : $advanced_app_port
