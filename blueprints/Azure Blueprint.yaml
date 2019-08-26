@@ -12,6 +12,8 @@ kind: blueprint
 metadata:
   description: Blueprint that deploys two applications in Azure
 
+debugging:
+  availability: on
 
 clouds:
   - azure: westus
