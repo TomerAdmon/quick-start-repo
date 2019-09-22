@@ -40,4 +40,4 @@ infrastructure:
             - subnet-082c4d7a80ae44c30
             application: 
             - subnet-043386e121f99e372
-            - subnet-060d875ddc421efff
+            - subnet-08e6df690314e731e
